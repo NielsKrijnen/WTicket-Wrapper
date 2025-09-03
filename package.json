@@ -21,5 +21,9 @@
     "tailwindcss": "^4.0.0",
     "typescript": "^5.0.0",
     "vite": "^7.0.4"
+  },
+  "dependencies": {
+    "wticket-bot": "^0.0.3",
+    "zod": "^4.1.5"
   }
 }

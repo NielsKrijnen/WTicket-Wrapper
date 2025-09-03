@@ -1,3 +1,9 @@
+import type { WTicketBot } from "wticket-bot";
+
 declare global {
-	namespace App {}
+	namespace App {
+		interface Locals {
+			wticket: WTicketBot
+		}
+	}
 }
