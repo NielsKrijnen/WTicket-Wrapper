@@ -1,13 +1,14 @@
 <script lang="ts">
   import { login } from "$lib/remote/auth.remote";
+  import { Button, Label, Input } from "$lib/components/ui";
 </script>
 
 <form {...login}>
-  <label for="username">Username</label>
-  <input type="text" id="username" name="username">
+  <Label for="username">Username</Label>
+  <Input type="text" id="username" name="username"/>
 
-  <label for="password">Password</label>
-  <input type="password" id="password" name="password">
+  <Label for="password">Password</Label>
+  <Input type="password" id="password" name="password"/>
 
-  <button type="submit">Login</button>
+  <Button type="submit">Login</Button>
 </form>

@@ -1,9 +1,10 @@
 <script lang="ts">
   import { logout } from "$lib/remote/auth.remote";
   import { invalidateAll } from "$app/navigation";
+  import { Button } from "$lib/components/ui";
 </script>
 
-<button onclick={async () => {
+<Button onclick={async () => {
   await logout()
   await invalidateAll()
-}}>Logout</button>
+}}>Logout</Button>
