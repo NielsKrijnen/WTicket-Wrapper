@@ -1,2 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+  import { logout } from "$lib/remote/auth.remote";
+  import { invalidateAll } from "$app/navigation";
+</script>
+
+<button onclick={async () => {
+  await logout()
+  await invalidateAll()
+}}>Logout</button>
