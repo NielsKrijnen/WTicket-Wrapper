@@ -136,6 +136,51 @@
               </Sidebar.MenuItem>
             </Sidebar.Menu>
           </Sidebar.Group>
+          <Sidebar.Group>
+            <Sidebar.Menu>
+              <Sidebar.MenuItem>
+                <Sidebar.MenuButton>
+                  {#snippet child({ props })}
+                    <a href="/users" {...props}>
+                      <span>Users</span>
+                    </a>
+                  {/snippet}
+                </Sidebar.MenuButton>
+              </Sidebar.MenuItem>
+              <Sidebar.MenuItem>
+                <Sidebar.MenuButton>
+                  {#snippet child({ props })}
+                    <a href="/relations" {...props}>
+                      <span>Relations</span>
+                    </a>
+                  {/snippet}
+                </Sidebar.MenuButton>
+              </Sidebar.MenuItem>
+              <Sidebar.MenuItem>
+                <Sidebar.MenuButton>
+                  {#snippet child({ props })}
+                    <a href="/staff" {...props}>
+                      <span>Staff</span>
+                    </a>
+                  {/snippet}
+                </Sidebar.MenuButton>
+              </Sidebar.MenuItem>
+            </Sidebar.Menu>
+          </Sidebar.Group>
+          <Sidebar.Group>
+            <Sidebar.GroupLabel>Management</Sidebar.GroupLabel>
+            <Sidebar.Menu>
+              <Sidebar.MenuItem>
+                <Sidebar.MenuButton>
+                  {#snippet child({ props })}
+                    <a href="/relations" {...props}>
+                      <span>Relations</span>
+                    </a>
+                  {/snippet}
+                </Sidebar.MenuButton>
+              </Sidebar.MenuItem>
+            </Sidebar.Menu>
+          </Sidebar.Group>
           <Sidebar.Group class="mt-auto">
             <Sidebar.GroupContent>
               <Sidebar.Menu>
