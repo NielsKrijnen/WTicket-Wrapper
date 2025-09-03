@@ -23,7 +23,7 @@
     "vite": "^7.0.4"
   },
   "dependencies": {
-    "wticket-bot": "^0.0.3",
+    "wticket-bot": "^0.0.4",
     "zod": "^4.1.5"
   }
 }

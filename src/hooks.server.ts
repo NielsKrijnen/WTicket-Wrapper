@@ -12,6 +12,7 @@ export const init: ServerInit = async () => {
 export const handle: Handle = async ({ resolve, event }) => {
   event.locals.wticket = new WTicketBot({
     host: ENV.PUBLIC_WTICKET_HOST,
+    token: event.cookies.get("session")
   })
 
   return resolve(event)
