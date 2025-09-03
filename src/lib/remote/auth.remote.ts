@@ -1,5 +1,6 @@
-import { command, form, getRequestEvent } from "$app/server";
+import { command, form, getRequestEvent, query } from "$app/server";
 import { z } from "zod";
+import { redirect } from "@sveltejs/kit";
 
 export const login = form(async data => {
   const { locals, cookies } = getRequestEvent()
@@ -14,6 +15,7 @@ export const login = form(async data => {
   })
 
   cookies.set("session", token, { path: '/' })
+  redirect(302, "/")
 })
 
 export const logout = command(async () => {
@@ -21,4 +23,10 @@ export const logout = command(async () => {
 
   await locals.wticket.auth.logout()
   cookies.delete("session", { path: '/' })
+})
+
+export const getUser = query(async () => {
+  const { locals } = getRequestEvent()
+
+  return locals.wticket.auth.getUser()
 })

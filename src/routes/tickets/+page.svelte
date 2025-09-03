@@ -3,5 +3,5 @@
 </script>
 
 {#each await listTickets() as ticket}
-  <p>{JSON.stringify(ticket)}</p>
+  {ticket.id}
 {/each}
